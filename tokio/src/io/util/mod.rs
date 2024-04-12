@@ -84,7 +84,7 @@ cfg_io_util! {
 
     // used by `BufReader` and `BufWriter`
     // https://github.com/rust-lang/rust/blob/master/library/std/src/sys_common/io.rs#L1
-    const DEFAULT_BUF_SIZE: usize = 4 * 1024;
+    const DEFAULT_BUF_SIZE: usize = 1 * 1024;
 
     cfg_coop! {
         fn poll_proceed_and_make_progress(cx: &mut std::task::Context<'_>) -> std::task::Poll<()> {
